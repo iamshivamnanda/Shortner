@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #090282;
+  background: linear-gradient(90deg, #090282 0%, #1313a8 27%, #00d4ff 100%);
+}
+.main-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#card-wrapper {
+  position: relative;
+  background-color: white;
+  box-shadow: -5px 5px 12px black;
+  transform-style: preserve-3d;
+  transition: all 1.4s ease;
+}
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #282828;
+}
+.input-wrapper {
+  padding: 20px;
+  position: relative;
+}
+#long-url {
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translateX(-50%);
+  padding: 0 10px;
+  letter-spacing: 2px;
+}
+#long-url:focus {
+  background-color: #282828;
+  outline: none;
+  border: 2px solid #282828;
+  color: white;
+  letter-spacing: 1px;
+}
+label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  background-color: #282828;
+  color: white;
+  padding: 2px 3px;
+  position: absolute;
+  left: 38px;
+}
+#shorten-btn, #copy-btn {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  padding: 8px;
+  color: white;
+  background: #090282;
+  background: linear-gradient(90deg, #090282 0%, #1313a8 27%, #00d4ff 100%);
+  border: none;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  box-shadow: -4px 4px 4px grey;
+  transition: box-shadow 0.2s ease, top 0.2s ease;
+}
+#shorten-btn:hover, #copy-btn:hover {
+  cursor: pointer;
+}
+#shorten-btn:focus, #copy-btn:focus {
+  outline: none;
+  box-shadow: -2px 2px 5px black;
+  top: 104px;
+}
+.front-card {
+  backface-visibility: hidden;
+  width: 400px;
+  height: 250px;
+  position: absolute;
+}
+.back-card {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  width: 400px;
+  height: 250px;
+  position: absolue;
+  background-color: white;
+}
