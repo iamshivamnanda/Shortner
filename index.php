@@ -9,8 +9,8 @@ require_once 'shortner.class.php';
 $shortener = new Shortener($db);
 
 // Retrieve short code from URL
-$shortCode = $_GET["c"];
-if($shortCode){
+if(!empty($_GET)){
+  $shortCode = $_GET["c"];
 try{
     // Get URL by short code
     $url = $shortener->shortCodeToUrl($shortCode);
@@ -32,6 +32,7 @@ try{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
     <title>Shortner</title>
 </head>
 <body>
@@ -49,13 +50,6 @@ try{
       </div>
       <div class="back-card">
        <div class="title">SHORTNER</div>
-      <div class="input-wrapper">
-        <form action="shortner.php">
-        <label for="long-url">[SHORT URL]</label>
-        <input type="text" id="long-url" name="long-url" placeholder="GET YOUR SHORT URL HERE">
-        <button type="submit" id="shorten-btn">🔥COPY</button>
-          </form>
-      </div>
     </div>
   </div>
 </body>

@@ -101,7 +101,6 @@ label {
 }
 .back-card {
   backface-visibility: hidden;
-  transform: rotateY(180deg);
   width: 400px;
   height: 250px;
   position: absolue;
